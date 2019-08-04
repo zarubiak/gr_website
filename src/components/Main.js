@@ -4,6 +4,9 @@ import PropTypes from 'prop-types'
 import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
+import pic04 from '../images/pic04.jpg'
+import pic05 from '../images/pic05.jpg'
+import pic06 from '../images/pic06.jpg'
 
 class Main extends React.Component {
   render() {
@@ -13,54 +16,42 @@ class Main extends React.Component {
     return (
       <div ref={this.props.setWrapperRef} id="main" style={this.props.timeout ? {display: 'flex'} : {display: 'none'}}>
 
-        <article id="intro" className={`${this.props.article === 'intro' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <h2 className="major">Intro</h2>
-          <span className="image main"><img src={pic01} alt="" /></span>
-          <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+        <article id="services" className={`${this.props.article === 'services' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+          <h2 className="major">Services</h2>
+          <span className="image main"><img src={pic03} alt="" /></span>
+          <p>At Campbell Electric, we pride ourselves on being hard working and getting the job done right. We offer services to all of the greater Victoria area and we're not satisfied until the work we provide exceeds your expectations. We offer a wide range of services for commercial and residential clients which includes electrical service upgrades, wiring, lighting installations, heat pump connections, renovations, knob and tube removal, electrical inspections and more.</p>
+          <p>Most homes in the Greater Victoria Area built before 2000 come standard with a 100 amp service. This 100 amp service can only handle a limited amount of circuits. Electrical service upgrades can be important for home owners to consider when adding new devices to their current living situation. If you are heavily reliant on high powered electrical devices in your home, and you feel you are not getting the efficiency out of these devices that you should, a 200 amp upgrade may be the solution. Contact us to learn more about 200 amp service upgrades and other services we offer!</p>
           {close}
         </article>
 
         <article id="work" className={`${this.props.article === 'work' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Work</h2>
+          <p>Below are some of the projects we have worked on. We're proud of out work and we want to ensure that our customers receive the best work in the Greater Victoria Area.</p>
           <span className="image main"><img src={pic02} alt="" /></span>
-          <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-          <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+          <span className="image main"><img src={pic05} alt="" /></span>
+          <p>The above two photos are showing a brand new custom home with all electrical done by Campbell Electric.</p>
+          <span className="image main"><img src={pic06} alt="" /></span>
+          <p>The above photo showcases a kitchen renovation that was completed by Campbell Electric.</p>
+          <span className="image main"><img src={pic04} alt="" /></span>
+          This photo shows us working on a 200 amp electrical service upgrage with an automatic transfer switch to a gas powered generator. Work done by Campbell Electric. 
           {close}
         </article>
 
         <article id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">About</h2>
-          <span className="image main"><img src={pic03} alt="" /></span>
-          <p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+          <span className="image main"><img src={pic01} alt="" /></span>
+          <p>Campbell Electric is a family run company that is local to Victoria. We are dedicated to quality commercial and residential electrical work in a safe cost effective manner. We strive to go above and beyond when working on all of our projects. For any interested inquires about our services please feel free to contact us!</p>
           {close}
         </article>
 
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Contact</h2>
-          <form method="post" action="#">
-            <div className="field half first">
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
-            </div>
-            <div className="field half">
-              <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
-            </div>
-            <div className="field">
-              <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
-            </div>
-            <ul className="actions">
-              <li><input type="submit" value="Send Message" className="special" /></li>
-              <li><input type="reset" value="Reset" /></li>
-            </ul>
-          </form>
+          <span className="image main"><img src={pic01} alt="" /></span>
+          <p>For any questions or inquires about services that we offer, contact us via phone, email, or Facebook below. We will be happy to assist you in making your electrical dreams a reality!</p><br />
+          <p>Email: campbellelectric3@gmail.com</p>
+          <p>Phone: (250)-885-7709</p>
           <ul className="icons">
-            <li><a href="#" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
-            <li><a href="#" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
-            <li><a href="#" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
-            <li><a href="#" className="icon fa-github"><span className="label">GitHub</span></a></li>
+            <li><a href="https://www.facebook.com/campbellelectriccanada/" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
           </ul>
           {close}
         </article>
